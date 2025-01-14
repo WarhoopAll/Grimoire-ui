@@ -117,6 +117,9 @@
     "TotalAccount": "Total number of accounts:",
     "TotalCharacters": "Total number of characters:"
   },
+  "Online": {
+    "NoPlayers": "There are no players on the server."
+  },
   "Other": {
     "Name": "Name",
     "Race": "Race",

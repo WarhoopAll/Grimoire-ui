@@ -5,8 +5,9 @@ import { UserProvider } from "@/context/userContext";
 import App from "@/app";
 import { ApiStatusProvider } from "@/context/apiStatus";
 import useCustomToast from "@/components/forms/toast";
+import {memo} from "react";
 
-const Root = () => {
+const Root = memo(() => {
     const { ToastWrapper } = useCustomToast();
 
     return (
@@ -21,7 +22,7 @@ const Root = () => {
             </I18nLoader>
         </UserProvider>
     );
-};
+});
 
 ReactDOM.createRoot(document.getElementById('root')).render(
     <Root />

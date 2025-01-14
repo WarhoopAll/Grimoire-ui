@@ -1,7 +1,5 @@
 import {useTranslation} from "react-i18next";
 import Layout from "@/layouts/layout";
-import useCustomToast from "@/components/forms/toast";
-import {ToastContainer} from "react-toastify";
 
 export default function Maintenance() {
     const {t} = useTranslation();

@@ -14,8 +14,9 @@ export default function RegisterModal({t}) {
     const [confirmPassword, setConfirmPassword] = useState('');
     const [loading, setLoading] = useState(false);
 
-    const { showToast } = useCustomToast();
+    const {showToast} = useCustomToast();
 
+    const isMobile = window.innerWidth <= 768;
 
     async function Send(e) {
         e.preventDefault();
@@ -65,10 +66,12 @@ export default function RegisterModal({t}) {
     }
 
     return (<>
-        <Button variant="light" onPress={onOpen} className="hover:text-warning">
+        <Button variant="light" onPress={onOpen}
+                className={`hover:text-customTXT text-white bg-black ${isMobile ? 'buttonClose' : ''}`}>
             {t("Button.Register")}
         </Button>
-        <Modal isOpen={isOpen} onClose={onClose} placement="center">
+        <Modal isDismissable={false}
+               isOpen={isOpen} onClose={onClose} placement="center">
             <ModalContent>
                 <form onSubmit={e => Send(e)}>
                     <ModalHeader className="flex flex-col gap-1">{t("RegPage.CreateAcc")}</ModalHeader>

@@ -498,3 +498,7 @@ input:focus {
 .no-news p {
     font-size: 18px;
 }
+
+*:focus {
+    outline: none !important;
+}
